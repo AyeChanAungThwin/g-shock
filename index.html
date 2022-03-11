@@ -1,0 +1,222 @@
+<!-- Created by Aye Chan Aung Thwin -->
+<html>
+    <header>
+        <title>G-Shock Model GBA-900</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script defer src="js/rotate-bluetooth-meter.js"></script>
+        <script defer src="js/sec-segments-design.js"></script>
+        <script defer src="js/digital-clock-calculations.js"></script>
+        <script defer src="js/analog-clock-calculation.js"></script>
+    </header>
+    <body>
+
+        <div class="g-shock-container">
+            <div class="clock">
+                <div class="shape-container">
+                    <div class="left-container">
+                        <div class="alm-sig-container">
+                            <h5>ALM</h5>
+                            <h5>SIG</h5>
+                        </div>
+
+                        <div class="left-seg-container">
+                            <div class="left-seg"></div>
+                        </div>
+                    </div>
+                
+                    <div class="brand-text-container">
+                        <div class="reset-rot">
+                            <h4>CASIO</h4>
+                            <h4>G-SHOCK</h4>
+                            <h4>STEPTRACKER</h4>
+                        </div>
+                    </div>
+
+                    <div class="top-container">
+                        <div class="top-box">
+                            <div class="min-max-container">
+                                <div class="min-max-rot min-rot">
+                                    <h5>◄MIN</h5>
+                                </div>
+                                <div class="min-max-rot max-rot">
+                                    <h5>MAX►</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-container">
+                        <div class="bottom-box">
+                            <div class="show-in-circle">
+                                <div class="digital-clock-container">
+                                    <span class="days-of-the-week" data-days-of-the-week>SU</span>
+                                    <span class="show-meridiem" data-show-meridiem>P</span>
+                                    <span class="auto-EL-feature">LT</span>
+                                    <span class="digit-hr-min" data-digit-hr-min>10:08</span>
+                                    <span class="digit-sec" data-digit-sec>36</span>
+                                    <span class="digit-date" data-digit-date>!6-30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bottom-cover-shadow">
+                        <div class="bottom-cover">
+                            <h6>SHOCK RESIST</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- lg-seg -->
+                <div class="seg-container">
+                    <div class="lg-seg-container">
+                        <div class="seg-rot lg-seg-rot lg-seg-rot-1">
+                            <div class="seg-design"></div>
+                        </div>
+                        <div class="seg-rot lg-seg-rot lg-seg-rot-2">
+                            <div class="seg-design"></div>
+                        </div>
+                        <div class="seg-rot lg-seg-rot lg-seg-rot-3">
+                            <div class="seg-design shortern-height"></div>
+                        </div>
+                        <div class="seg-rot lg-seg-rot lg-seg-rot-4">
+                            <div class="seg-design shortern-height"></div>
+                        </div>
+                    </div>
+
+                    <!-- md-seg -->
+                    <div class="md-seg-container">
+                        <div class="md-seg-rot md-seg-rot-1">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                        <div class="md-seg-rot md-seg-rot-2">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                        <div class="md-seg-rot md-seg-rot-3">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                        <div class="md-seg-rot md-seg-rot-4">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                        <div class="md-seg-rot md-seg-rot-5">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                        <div class="md-seg-rot md-seg-rot-6">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                        <div class="md-seg-rot md-seg-rot-7">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                        <div class="md-seg-rot md-seg-rot-8">
+                            <div class="seg-design md-seg"></div>
+                        </div>
+                    </div>
+
+                    <!-- sm-seg -->
+                    <div id="sm-seg-container" class="sm-seg-container">
+                        <!-- The following div is created x60 times with JS!
+                        sec-segment-design.js -->
+                        <!--
+                        <div class="sm-seg-rot sm-seg-rot-*">
+                            <div class="seg-design sm-seg"></div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+
+                <!-- Bluetooth meter container -->
+                <div class="bt-meter-container">
+                    <!-- Bluetooth meter -->
+                    <div class="bt-meter">
+                        <!-- Digit circle container -->
+                        <div class="bt-digits-container">
+                            <div class="bt-digit-rot bt-digit-rot-1">
+                                <div class="bt-digit">
+                                    <h4 class="num">20</h4>
+                                </div>
+                            </div>
+                            <div class="bt-digit-rot bt-digit-rot-2">
+                                <div class="bt-digit">
+                                    <h4 class="num rotate-num">40</h4>
+                                </div>
+                            </div>
+                            <div class="bt-digit-rot bt-digit-rot-3">
+                                <div class="bt-digit">
+                                    <h4 class="num rotate-num">60</h4>
+                                </div>
+                            </div>
+                            <div class="bt-digit-rot bt-digit-rot-4">
+                                <div class="bt-digit">
+                                    <h4 class="num">80</h4>
+                                </div>
+                            </div>
+                            <div class="bt-digit-rot bt-digit-rot-5">
+                                <div class="bt-digit">
+                                    <h4 class="num">100</h4>
+                                </div>
+                            </div>
+
+                            <!-- Bluetooth segment container -->
+                            <div class="bt-seg-container">
+                                <div class="bt-seg-rot bt-seg-rot-1">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-2">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-3">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-4">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-5">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-6">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-7">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-8">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-9">
+                                    <div class="bt-seg"></div>
+                                </div>
+                                <div class="bt-seg-rot bt-seg-rot-10">
+                                    <div class="bt-seg"></div>
+                                </div>
+
+                                <!-- Bluetooth Arc -->
+                                <div class="bt-arc bt-arc-rot">
+                                    <div class="bt-container bt-rot">
+                                        <div class="bt-design"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End: Bluetooth segment container -->
+                        </div>
+                        <!--End: Digit circle container -->
+                    </div>
+                    <!-- End: Bluetooth meter -->
+                </div>
+                <!-- End: Bluetooth meter container-->
+
+                <div class="analog-clock-container">
+                    <div class="hr-hand-container" data-hr-hand>
+                        <div class="hr-hand-head"></div>
+                        <div class="hr-hand-tail"></div>
+                    </div>
+
+                    <div class="min-hand-container" data-min-hand>
+                        <div class="min-hand-head"></div>
+                        <div class="min-hand-tail"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- End: clock-->
+        </div>
+    </body>
+</html>
