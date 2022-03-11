@@ -25,6 +25,12 @@
     src: url(../font/Zado.ttf);
 }
 
+/* https://www.dafont.com/astronomus.font */
+@font-face {
+    font-family: AstroFont;
+    src: url(../font/Square\ One.ttf);
+}
+
 :root {
     --cl-body: rgb(84, 85, 84);
 
@@ -45,7 +51,7 @@
     --bs-in: inset 8px 0px 8px 1px black;
     --bs-out: 0px 0px 8px 1px black;
 
-    --bs-in-sm: inset 1px 0px 1px 1px black;
+    --bs-in-sm: inset 2px 0px 2px 1px black;
     --bs-out-sm: 0px 0px 1px 1px black;
 
     /* text-shadow i.e., text-border-dark */
@@ -100,14 +106,10 @@
     --fs-body: 1rem;
 
     /* fonts */
-    --ff-clement-five-font: ClementFiveFont;
-    --ff-simple-bites-font: SimpleBitesFont;
-    --ff-ds-digital-font: DsDigitalFont;
-    --ff-ds-digital-bold-font: DsDigitalBoldFont;
     --ff-dagger-square-font: DaggerSquareFont;
-    --ff-yacimiento-font: YacimientoFont;
     --ff-dot-font: ZadoFont;
     --ff-seven-seg-font: SevenSegFont;
+    --ff-astro-font: AstroFont;
 
     --bt-seg-border-size: 6px solid var(--cl-white-light);
     --bt-arc-border-size: 0.0625rem solid var(--cl-white-light);
@@ -983,7 +985,8 @@ Rotation is done through sec-segments-design.js
     text-align: right;
     padding-right: 25%;
 
-    font-family: var(--ff-dagger-square-font);
+    font-family: var(--ff-astro-font);
+    /* var(--ff-dagger-square-font); */
 
     text-shadow: var(--ts-text-border-dark);
     color: var(--cl-white-light);
@@ -997,22 +1000,18 @@ Rotation is done through sec-segments-design.js
     content:'';
     position: absolute;
 
-    width: 30%;
+    width: 33%;
     height: 1.5%;
 
     top: 61%;
-    left: 46%;
+    left: 42%;
 
     border: 1px solid black;
     background: var(--cl-white-light);
 }
 
-/* @media (min-width: 480px) {
-    
-} */
-
 .reset-rot h4:nth-child(3) {
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
 .shape-container .top-container {
@@ -1064,7 +1063,7 @@ Rotation is done through sec-segments-design.js
 
     border-radius: 7%;
     box-shadow: var(--bs-out);
-    background: var(--cl-body);
+    /* background: var(--cl-body); */
 }
 
 .top-box {
@@ -1093,7 +1092,7 @@ Rotation is done through sec-segments-design.js
     height: 122%;
 
     top: 120%;
-    left: 127%;
+    left: 128%;
     transform: skewX(30deg) translate(-50%, -50%);
 
     border-radius: 50%;
@@ -1108,8 +1107,8 @@ Rotation is done through sec-segments-design.js
 
     position: absolute;
 
-    width: 90%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
 
     top: 50%;
     left: 50%;
@@ -1117,11 +1116,129 @@ Rotation is done through sec-segments-design.js
 
     border-radius: 50%;
 
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
+}
+
+.min-max-container .min-max-rot::before {
+    content: '';
+    position: absolute;
+
+    width: 80%;
+    height: 80%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(var(--min-max-rotation) * 1deg));
+
+    box-shadow: var(--bs-out);
+    border-radius: 50%;
+
+    border: 12px solid black;
+}
+
+.min-max-container .min-max-rot::after {
+    content: '';
+    position: absolute;
+
+    width: 78%;
+    height: 78%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(var(--min-max-rotation) * 1deg));
+
+    box-shadow: var(--bs-out);
+    border-radius: 50%;
+
+    background: var(--cl-white-light);
+}
+
+.min-max-container .min-max-seg {
+    --min-max-seg-rotation: 0;
+
+    position: absolute;
+
+    width: 1%;
+    height: 79%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(calc(var(--min-max-seg-rotation) * 1deg));
+    
+    background: var(--cl-black-dark);
+}
+
+.min-max-seg.min-max-seg-1 {
+    --min-max-seg-rotation: -7;
+}
+
+.min-max-seg.min-max-seg-2 {
+    --min-max-seg-rotation: 7;
+}
+
+.min-max-seg.min-max-seg-3 {
+    --min-max-seg-rotation: -21;
+}
+
+.min-max-seg.min-max-seg-4 {
+    --min-max-seg-rotation: 21;
+}
+
+.min-max-container .inner-circle {
+    position: absolute;
+
+    width: 73%;
+    height: 73%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    /* border: 1px solid yellow; */
+
+    background: var(--cl-black-dark);
+}
+
+.min-max-container .inner-circle::before {
+    content:'';
+    position: absolute;
+
+    width: 88%;
+    height: 88%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    /* border: 1px solid yellow; */
+
+    box-shadow: var(--bs-in-top);
+    background: var(--cl-black-light);
+}
+
+.min-max-container .inner-circle::after {
+    content:'';
+    position: absolute;
+
+    width: 80%;
+    height: 80%;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    border-radius: 50%;
+    /* border: 1px solid black; */
+
+    box-shadow: var(--bs-out-sm);
+    background: var(--cl-black-dark);
 }
 
 .min-max-rot h5 {
     margin: auto 0;
+    margin-top: 3%;
     color: white;
     text-align: center;
 
@@ -1130,11 +1247,40 @@ Rotation is done through sec-segments-design.js
 }
 
 .min-max-rot.min-rot {
-    --min-max-rotation: -20;
+    --min-max-rotation: -17;
 }
 
 .min-max-rot.max-rot {
-    --min-max-rotation: 20;
+    --min-max-rotation: 17;
+}
+
+.min-max-container .top-cover {
+    position: absolute;
+
+    width: 10%;
+    height: 50%;
+
+    left: 72%;
+    transform: translate(-50%) rotate(29deg);
+
+    /* border: 1px solid yellow; */
+    background: var(--cl-black-dark);
+}
+
+.min-max-container .top-cover::before {
+    content:'';
+    display: block;
+    position: absolute;
+
+    width: 20%;
+    height: 54%;
+
+    left: -7%;
+    transform: translate(-50%) skewY(50deg) rotate(0deg);
+
+    /* border: 1px solid yellow; */
+    box-shadow: var(--bs-in-sm);
+    background: var(--cl-black-dark);
 }
 
 .shape-container .bottom-container {
@@ -1282,6 +1428,7 @@ Rotation is done through sec-segments-design.js
     top: 61%;
     left: 21%;
 
+    color: white;
     font-size: 0.7rem;
     font-family: var(--ff-seven-seg-font);
 }
@@ -1295,8 +1442,9 @@ Rotation is done through sec-segments-design.js
     top: 75%;
     left: 10%;
 
+    color: white;
     font-size: 0.7rem;
-    font-family: var(--ff-dagger-square-font);
+    font-family: var(--ff-astro-font);
 }
 
 .digital-clock-container .digit-hr-min {
