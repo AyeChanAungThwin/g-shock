@@ -732,7 +732,7 @@ Rotation is done through sec-segments-design.js
   position: absolute;
 
   height: 80%;
-  width: 36%;
+  width: 34%;
   border: var(--bt-border-size) solid var(--cl-white-light);
 }
 
